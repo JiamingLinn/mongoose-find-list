@@ -1,0 +1,26 @@
+{
+  "name": "mongoose-find-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiamingLinn/mongoose-find-list.git"
+  },
+  "keywords": [
+    "mongoos",
+    "find"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JiamingLinn/mongoose-find-list/issues"
+  },
+  "homepage": "https://github.com/JiamingLinn/mongoose-find-list#readme",
+  "devDependencies": {
+    "mongoose": "^4.8.1"
+  }
+}
