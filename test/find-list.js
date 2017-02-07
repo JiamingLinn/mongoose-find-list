@@ -41,7 +41,7 @@ School.remove({}).then(() => {
 })
 .then(() => {
   // 模糊查询
-  return School.findList({filters: {r: {type: 'normal', value: '3'}}},console.log);
+  return School.findList({filters: {r: {'$regex': '3'}}}).then(result => console.log('*regex*\n', result));
 })
 .then(() => {
   return School.findList({filters: {f: '1'}}).then(result => console.log('*filters*\n', result));

@@ -1,12 +1,3 @@
-function check(obj, type) {
-  if (type === 'normal') {
-    return typeof obj === 'object' &&
-      typeof obj.value === 'string' &&
-      obj.type.toLowerCase() === 'normal';
-  }
-  return false;
-}
-
 function findList(params, done) {
   const query = Object.assign({
     filters: {},
@@ -18,14 +9,6 @@ function findList(params, done) {
   const {filters, page, perPage, sortField, sortDir} = query;
 
   const sort = sortField ? {[sortField]: sortDir.toLowerCase()} : {};
-
-  Object.keys(filters).forEach(field => {
-    const item = filters[field];
-    if (check(item, 'normal')) {
-      filters[field] = item.value;
-    }
-    filters[field] = new RegExp(item);
-  });
 
   const offset = (page -1) * perPage;
   // return this.find(filters).sort(sort).skip(skip).limit(perPage).exec(done)
